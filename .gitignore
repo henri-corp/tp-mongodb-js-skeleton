@@ -2,3 +2,4 @@ node_modules
 mongodb
 *.php
 .env
+exercices/ex*.js
