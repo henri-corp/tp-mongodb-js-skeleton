@@ -1,0 +1,9 @@
+{
+  "name": "mongodb_tp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^4.1.2"
+  }
+}
