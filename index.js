@@ -8,6 +8,8 @@ require('dotenv').config();
   
     try {
         await client.connect();
+        console.log(`👑 MongoDB connected`.green);
+
         const database = client.db(process.env.MONGO_DB);
 
         const cmd = process.argv.slice(2)[0];
@@ -28,7 +30,6 @@ require('dotenv').config();
             console.log(`😱 An error occured`.red.bold);
             console.log(error);
         }
-        console.log(`👋 Closing redis`.gray);
     }
     catch(error){
         console.error(`😱 Something went wrong`.white.bgRed.bold);
@@ -37,7 +38,7 @@ require('dotenv').config();
 
 
     } finally {
-        // Ensures that the client will close when you finish/error
+        console.log(`👋 Closing MongoDB`.gray);
         await client.close();
         exit(0);
     }
